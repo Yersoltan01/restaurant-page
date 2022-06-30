@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'choco_bubbleballon_style';
+  src: url('fonts/chocobubbleballon-9y05b.woff2') format('woff2'),
+       url('fonts/chocobubbleballon-9y05b.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
