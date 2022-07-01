@@ -51,23 +51,38 @@ function createMenu() {
 }
 
 function createMenuItem(name, description, imgName) {
-  const menuItem = document.createElement("div");
+  const menuItem = document.createElement('div');
   menuItem.classList.add("menu-item");
 
-  const foodName = document.createElement("h2");
+  const foodName = document.createElement('h2');
   foodName.textContent = name;
 
-  const foodDescription = document.createElement("p");
+  const foodDescription = document.createElement('p');
   foodDescription.textContent = description;
 
-  const foodImage = document.createElement("img");
+  const foodImage = document.createElement('img');
   foodImage.src = `../src/img/pizzas/${imgName}.jpeg`;
 
+  const buy = document.createElement('div');
+  buy.classList.add('buy');
+
+  const price = document.createElement('p');
+  price.classList.add('price');
+  price.textContent = '30$';
+
+  const chooseBtn = document.createElement('button');
+  chooseBtn.classList.add('choose-btn');
+  chooseBtn.textContent = 'Choose';
+
   foodImage.alt = `${name}`;
+
+  buy.appendChild(price);
+  buy.appendChild(chooseBtn);
 
   menuItem.appendChild(foodImage);
   menuItem.appendChild(foodName);
   menuItem.appendChild(foodDescription);
+  menuItem.appendChild(buy);
 
   return menuItem;
 }
