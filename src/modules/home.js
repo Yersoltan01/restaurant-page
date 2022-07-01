@@ -1,4 +1,4 @@
-import shippingImage from '../img/shipping.svg';
+import shippingImage from '../img/delivery.png';
 
 function createHome() {
   const home = document.createElement('div');

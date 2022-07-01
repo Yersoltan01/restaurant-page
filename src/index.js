@@ -1,3 +1,4 @@
+import './reset.css';   
 import './style.css';
 import loadHome from "./modules/home";
 import loadMenu from "./modules/menu";
@@ -5,14 +6,17 @@ import loadContact from "./modules/contact";
 
 function createHeader() {
   const header = document.createElement('header');
-  header.classList.add('header');
+
+  const logo = document.createElement('img');
+  logo.src = '../src/img/logo.png';
+  logo.setAttribute('id', 'logo');
 
   const restarauntName = document.createElement('h1');
   restarauntName.classList.add('restaraunt-name');
   restarauntName.textContent = 'Pizza World';
 
+  header.appendChild(logo);
   header.appendChild(restarauntName);
-  header.appendChild(createNav());
 
   return header;
 }
@@ -80,10 +84,14 @@ function createFooter() {
   const copyright = document.createElement('p');
   copyright.textContent = 'Copyright © Yersoltan';
 
+  const githubLogo = document.createElement('img');
+  githubLogo.src = '../src/img/github.png';
+
   const githubLink = document.createElement('a');
   githubLink.href = 'https://github.com/Yersoltan01';
 
   githubLink.appendChild(copyright);
+  githubLink.appendChild(githubLogo);
   footer.appendChild(githubLink);
 
   return footer;
@@ -93,6 +101,7 @@ function initializeWebsite() {
   const content = document.getElementById("content");
 
   content.appendChild(createHeader());
+  content.appendChild(createNav());
   content.appendChild(createMain());
   content.appendChild(createFooter());
   setActiveBtn(document.querySelector(".button-nav"));
