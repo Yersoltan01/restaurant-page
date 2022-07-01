@@ -34,7 +34,7 @@ function createMenu() {
   );
   menu.appendChild(
     createMenuItem(
-      "margarita",
+      "Margarita",
       "tomato sauce, mozzarella, tomatoes, oregano",
       "margarita"
     )
